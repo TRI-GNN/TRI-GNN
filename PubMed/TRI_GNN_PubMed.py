@@ -35,7 +35,7 @@ added_edge_x, added_edge_y = np.where((pubmed_wasserstein_distance > 0) & (pubme
 np_adj[added_edge_x, added_edge_y] = topo_adj[added_edge_x, added_edge_y] + 1
 
 # remove edges
-removed_threshold = 3000. # 500 is worse
+removed_threshold = 3000. 
 removed_edge_x, removed_edge_y = np.where(np.triu(pubmed_wasserstein_distance) > removed_threshold)
 removed_percent = 1.
 sample_removed_indices = (np.random.permutation(range(len(removed_edge_x))))[:int(len(removed_edge_x) * removed_percent)]
