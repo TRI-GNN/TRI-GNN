@@ -1,0 +1,8 @@
+scipy==1.5.3
+networkx==2.3.0
+keras==2.2.4
+tensorflow==1.13.1
+tensorflow-gpu==1.15.0
+h5py==2.10.0
+numpy==1.19.4
+scikit_learn==0.23.2
