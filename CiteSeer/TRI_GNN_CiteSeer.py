@@ -141,7 +141,7 @@ graph_conv_2 = TRIGConv(channels = n_classes,
 
 # Build model
 model = Model(inputs=[X_in, fltr_in], outputs=graph_conv_2)
-optimizer = Adam(lr=learning_rate)
+optimizer = Adam(lr=learning_rate, epsilon= 1e-8)
 model.compile(optimizer=optimizer,
               loss='categorical_crossentropy',
               weighted_metrics=['acc'])
