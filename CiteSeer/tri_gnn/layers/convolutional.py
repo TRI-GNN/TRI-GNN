@@ -186,7 +186,6 @@ class TRIGConv(Layer):
         output = K.squeeze(output, axis=-1)
 
         if self.channels != 6:
-            output = tf.nn.elu(output)+ output
             output = tf.nn.elu(output)
 
         elif self.channels == 6:
